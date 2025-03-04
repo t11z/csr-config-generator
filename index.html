@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User-Zertifikat CSR Config Generator</title>
+    <title>User Certificate CSR Config Generator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -75,25 +75,25 @@
     <div class="container">
         <h1>User-Zertifikat CSR Config Generator</h1>
         <label for="email">Email:</label>
-        <input type="text" id="email" placeholder="user@meine-domain.de">
+        <input type="text" id="email" placeholder="firstname.lastname@nakatomi.corp">
         
         <label for="cn">Common Name (CN):</label>
-        <input type="text" id="cn" placeholder="Benutzername">
+        <input type="text" id="cn" placeholder="Firstname Lastname">
         
         <label for="location">Location (L):</label>
-        <input type="text" id="location" placeholder="Bad Oeynhausen">
+        <input type="text" id="location" placeholder="Los Angeles">
         
         <label for="state">State (ST):</label>
-        <input type="text" id="state" placeholder="Nordrhein-Westfalen">
+        <input type="text" id="state" placeholder="California">
         
         <label for="organization">Organization (O):</label>
-        <input type="text" id="organization" placeholder="Mein Unternehmen">
+        <input type="text" id="organization" placeholder="Nakatomi Corp">
         
         <label for="department">Department (OU):</label>
-        <input type="text" id="department" placeholder="Meine Abteilung">
+        <input type="text" id="department" placeholder="Research &amp; Development">
         
         <label for="upn">User Principal Name (UPN):</label>
-        <input type="text" id="upn" placeholder="user@meine-domain.de">
+        <input type="text" id="upn" placeholder="user@nakatomi.corp">
         
         <label for="config">Generated Config:</label>
         <textarea id="config" readonly></textarea>
@@ -102,8 +102,8 @@
         <button onclick="downloadConfig()">Download Config</button>
         
         <div class="note">
-            <strong>Hinweis:</strong> Um den CSR zusammen mit einem Schlüssel zu erstellen, verwenden Sie den folgenden OpenSSL-Befehl:
-            <pre><code>openssl req -newkey rsa:2048 -nodes -keyout mein-schluessel.key -out mein-csr.csr -config openssl-user-cert.cnf</code></pre>
+            <strong>Hinweis:</strong> To create a CSR alongside with a private key, use the following SSL command:
+            <pre><code>openssl req -newkey rsa:2048 -nodes -keyout my.key -out my.csr -config openssl-user-cert.cnf</code></pre>
         </div>
     </div>
 
